@@ -7,11 +7,13 @@ test('should first', async ({ page }) => {
   await setupMockData(page, testArr);
   await page.goto('https://anastasiaa1890.github.io/mesto/');
   await expect(page.locator('.header__logo')).toBeVisible();
+  await expect(page.locator('.elements')).toBeVisible();
   /* const el = await page.locator('.element').all();
   const nameTitle = page.getByRole('heading', { name: 'nn' });
   el.map(async (p) => {
     return await p.nth(0).locator('.element__title').textContent();
   }) */
+  
   await page.close()
 })
 
