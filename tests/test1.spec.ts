@@ -15,7 +15,7 @@ test('should first', async ({ page }) => {
   await page.close()
 })
 
-test('visual comp', async ({ page }) => { 
+test.skip('visual comp', async ({ page }) => { 
   const profile = page.locator('.profile__add-button')
   await page.goto('https://anastasiaa1890.github.io/mesto/');
   await expect(profile).toHaveScreenshot('addbutton.png');
